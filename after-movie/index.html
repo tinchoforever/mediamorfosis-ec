@@ -1,8 +1,8 @@
 <!doctype HTML>
 <html>
 <head>
-<title>¿Qué vamos a hacer en el taller de Futuros? </title>
-<meta name="description" content="Descubrilo con realidad aumentada y sumate al taller para empujar y encontrar nuevas ideas.">
+<title>After Movie - Porteles de Contenido!</title>
+<meta name="description" content="Descubrilo con realidad aumentada">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
 <script src="aframe-gif-shader.js"></script>
@@ -78,42 +78,32 @@ a.button, button{
 
        <a-scene embedded arjs='patternRatio: 0.9; debugUIEnabled: false;'>
       <a-assets>
-            <video id="rami"  webkit-playsinline  loop src="futuros.mp4">
-               <video id="futuro2"  webkit-playsinline  loop src="futuros.mp4">
-                 <video id="futuro1"  webkit-playsinline  loop src="futuros.mp4">
+            <video id="rami"  webkit-playsinline  loop src="after.mp4">
+
     </a-assets>  	
 
    
 
-    <a-marker id="rami-marker" preset='custom' type='pattern' url='marker-futuros-arte-bici.patt'>
+    <a-marker id="rami-marker" preset='custom' type='pattern' url='after-image.patt'>
              <a-video src="#rami" width="1" height="2" position="0 0 0" rotation="-90 0 0">
              </a-video>
     </a-marker>
     
-    <a-marker id="futuro1-marker" preset='custom' type='pattern' url='marker-flyer-1.patt'>
-             <a-video src="#futuro1" width="1" height="2" position="-90 0 0" rotation="0 0 0">
-             </a-video>
-    </a-marker>
-    
-       <a-marker id="futuro2-marker" preset='custom' type='pattern' url='marker-flyer-2.patt'>
-             <a-video src="#futuro2" width="1" height="2" position="-90 0 0" rotation="0 0 0">
-             </a-video>
-    </a-marker>
     
     
   	<a-entity camera></a-entity>
     </a-scene>
     <div id="wrapper" class="wrapper">
       <div class="inner">
-        <h1> Taller de Diseño Futuros. </h1>
-        <h5> ¿Qué es lo que intenta decirnos Edwin y Tincho tienen para decirte.? </h5>
+        <h1> After Movie CL</h1>
+        <h5> Descubre el contenido exclusivo de hoy! </h5>
         <p> Aceptá permisos de camára, apuntá tu telefono al video y descubrí la historia </p>
         <button type="button" onClick="start(this.parentNode.parentNode)">Empezar</button>
       </div>
     </div>
   </body>
   <script>
-    var videos = ["rami","futuro1","futuro2s"];
+    var videos = ["rami"];
     var played = [false];
 
     function checkOpenYoutube(){
