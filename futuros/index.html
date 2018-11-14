@@ -79,12 +79,24 @@ a.button, button{
        <a-scene embedded arjs='patternRatio: 0.9; debugUIEnabled: false;'>
       <a-assets>
             <video id="rami"  webkit-playsinline  loop src="futuros.mp4">
+               <video id="futuro2"  webkit-playsinline  loop src="futuros.mp4">
+                 <video id="futuro1"  webkit-playsinline  loop src="futuros.mp4">
     </a-assets>  	
 
    
 
     <a-marker id="rami-marker" preset='custom' type='pattern' url='marker-futuros-arte-bici.patt'>
              <a-video src="#rami" width="1" height="2" position="0 0 0" rotation="0 0 0">
+             </a-video>
+    </a-marker>
+    
+    <a-marker id="futuro1-marker" preset='custom' type='pattern' url='marker-flyer-1.patt'>
+             <a-video src="#futuro1" width="1" height="2" position="0 0 0" rotation="0 0 0">
+             </a-video>
+    </a-marker>
+    
+       <a-marker id="futuro2-marker" preset='custom' type='pattern' url='marker-flyer-2.patt'>
+             <a-video src="#futuro2" width="1" height="2" position="0 0 0" rotation="0 0 0">
              </a-video>
     </a-marker>
     
@@ -101,7 +113,7 @@ a.button, button{
     </div>
   </body>
   <script>
-    var videos = ["rami"];
+    var videos = ["rami","futuro1","futuro2s"];
     var played = [false];
 
     function checkOpenYoutube(){
